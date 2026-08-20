@@ -10,7 +10,7 @@ This project demonstrates how to containerize a Machine Learning experiment usin
 The experiment trains a Decision Tree model using the Palmer Penguins dataset and outputs evaluation metrics.
 
 ## Project Structure
-
+```
 mlops-docker-ml-assignment-2025EMAI10010
 │
 ├── README.md
@@ -19,7 +19,7 @@ mlops-docker-ml-assignment-2025EMAI10010
     ├── palmer-panguin-decisionTree.py
     ├── requirements.txt
     └── Dockerfile
-
+```
 ## How to Run
 
 Build Docker image:
