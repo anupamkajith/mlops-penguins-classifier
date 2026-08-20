@@ -1,16 +1,14 @@
-#Use python base image
-FROM python:3.10
+FROM python:3.11-slim
 
-#Working directory
 WORKDIR /app
 
-#copy project files
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
 COPY requirements.txt .
-COPY palmer-panguin-decisionTree.py .
 
-
-#intsall dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-#Run Ml experiment
-cmd ["python","palmer-panguin-decisionTree.py"]
+COPY src/ ./src/
+
+CMD ["python", "src/train.py"]
